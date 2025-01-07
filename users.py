@@ -999,11 +999,22 @@ users = [{"id":1,"first_name":"Angeline","last_name":"Timothy","email":"atimothy
 {"id":999,"first_name":"Bryanty","last_name":"Rosenvasser","email":"brosenvasserrq@discovery.com","gender":"Male","ip_address":"186.72.250.20"},
 {"id":1000,"first_name":"Karita","last_name":"Truter","email":"ktruterrr@mapy.cz","gender":"Female","ip_address":"176.154.178.243"}]
 
+ 
+female = 0
+male = 0
 
-# code yozing
-# natija quyidagicha chiqsin
-"""
-Hisobot:
-- Erkaklar: 500 ta, 50%i
-- Ayollar: 500 ta, 50%i
-"""
+for woman in users:
+    if woman['gender'] == 'Female':
+        female +=1
+
+for man in users:
+    if man['gender'] == 'Male':
+        male +=1
+
+male_count = female * 100 / len(users)
+
+female_count = male * 100 / len(users)
+
+
+print("Hisobot: \n" , f"- Erkaklar: {male} ta, {male_count}%")
+print(f" - Ayollar: {female} ta, {female_count}%")
